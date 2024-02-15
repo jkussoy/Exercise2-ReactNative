@@ -10,8 +10,8 @@ import {
 } from 'react-native';
 import React from 'react';
 import Download from './Assets/be-a-Programmer.jpg';
-import code from './Assets/code.jpeg';
-import tech from './Assets/tech.jpeg';
+import js from './Assets/javascript.jpeg';
+import vscode from './Assets/vscode.png';
 
 const App = () => {
   const handlePress = () => {
@@ -21,14 +21,16 @@ const App = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome To Basic Components in RN</Text>
+      <Text style={styles.title}>Welcome</Text>
     <ScrollView>
+      <Text style={styles.usrnm}>Username</Text>
       <TextInput
         style={styles.inputcollum}
         placeholder="   Masukan Username anda"
         placeholderTextColor="black"
         secureTextEntry
       />
+      <Text style={styles.pass}>Password</Text>
       <TextInput
         style={styles.inputcollum}
         placeholder="   Masukan Password Anda"
@@ -40,29 +42,6 @@ const App = () => {
           style={styles.touchableOpacity}>
           <Text style={styles.touchableText}>submit</Text>
         </TouchableOpacity>
-        <View style={styles.colorBoxesContainer}>
-          <View style={[styles.colorBox, {backgroundColor: 'black'}]} />
-          <View style={[styles.colorBox, {backgroundColor: 'grey'}]} />
-          <View style={[styles.colorBox, {backgroundColor: 'black'}]} />
-        </View>
-        <Image
-          source={require('./Assets/uk.png')}
-          style={styles.image}
-        />
-        <Text style={styles.uk}>Universitas Klabat</Text>
-        <Image
-          source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
-          style={styles.image}
-        />
-        <Text style={styles.rn}>React Native</Text>
-        <Image source={Download} style={styles.image} />
-        <Text style={styles.prog}>Become A Professional Programer</Text>
-        <Text style={styles.ty}>Thankyou For visiting</Text>
-        <View style={styles.colorBoxesContainer1}>
-          <View style={[styles.colorBox1, {backgroundColor: 'black'}]} />
-          <View style={[styles.colorBox1, {backgroundColor: 'grey'}]} />
-          <View style={[styles.colorBox1, {backgroundColor: 'black'}]} />
-        </View>
       </ScrollView>
     </View>
   );
@@ -73,15 +52,33 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 23,
+    fontSize: 45,
     fontWeight: 'bold',
     color: 'black',
-    textAlign: 'center',
+    textAlign: 'left',
     marginTop: 20,
     marginBottom: 20,
-    backgroundColor: '#bebebe',
+    marginLeft: 15,
     borderColor: 'black',
-    borderRadius: 10,
+    borderRadius: 50,
+  },
+  usrnm: {
+    fontSize: 20,
+    color: '#000000',
+    textAlign: 'left',
+    marginTop: 10,
+    marginLeft: 15,
+    borderColor: 'black',
+    borderRadius: 50,
+  },
+  pass: {
+    fontSize: 20,
+    color: '#000000',
+    textAlign: 'left',
+    marginTop: 10,
+    marginLeft: 15,
+    borderColor: 'black',
+    borderRadius: 50,
   },
   inputcollum: {
     borderColor: 'black',
@@ -90,82 +87,19 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
   },
-  colorBoxesContainer: {
-    flexDirection: 'row',
-    marginTop: 20,
-    justifyContent: 'space-around',
-    borderRadius: 20,
-    marginBottom: 20,
-  },
-  colorBox: {
-    marginTop: 5,
-    width: 120,
-    height: 100,
-    borderRadius: 10,
-  },
-  colorBoxesContainer1: {
-    flexDirection: 'row',
-    marginTop: 20,
-    justifyContent: 'space-around',
-    borderRadius: 20,
-    marginBottom: 80,
-  },
-  colorBox1: {
-    marginTop: 5,
-    width: 120,
-    height: 100,
-    borderRadius: 10,
-  },
-  image: {
-    width: 200,
-    height: 200,
-    alignSelf: 'center',
-    marginVertical: 10,
-    borderRadius: 20,
-  },
   touchableOpacity: {
-    backgroundColor: 'black',
+    backgroundColor: '#ff6600',
     padding: 10,
-    borderRadius: 8,
+    borderRadius: 10,
     alignSelf: 'center',
-    marginTop: 20,
+    marginTop: 35,
+    height: 45,
+    width: 380,
   },
   touchableText: {
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
-  },
-  uk:{
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: 'black',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  rn:{
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: 'black',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  prog:{
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: 'black',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  ty:{
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: 'black',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 20,
   },
 });
 export default App;
